@@ -11,7 +11,7 @@ This document outlines the structured business data, services, service areas, an
 | **Business Name** | Erics Tidy Turf |
 | **Phone Number** | 504-909-1424 |
 | **Email** | ericstidyturfllc@gmail.com |
-| **Google My Business (GMB) Link** | [https://share.google/Hkuf9AIgf7jVN6dC9](https://share.google/Hkuf9AIgf7jVN6dC9) |
+| **Google My Business (GMB) Link** | [https://www.google.com/maps/place/Eric+Tidy+Turf/@30.0002549,-90.0254014,10z/data=!3m1!4b1!4m6!3m5!1s0x8620a72b11144a21:0xadc1ae7cf956345e!8m2!3d30.0002549!4d-90.0254014!16s%2Fg%2F11jvmmqppm?hl=en&entry=ttu&g_ep=EgoyMDI2MDcyNy4wIKXMDSoASAFQAw%3D%3D](https://www.google.com/maps/place/Eric+Tidy+Turf/@30.0002549,-90.0254014,10z/data=!3m1!4b1!4m6!3m5!1s0x8620a72b11144a21:0xadc1ae7cf956345e!8m2!3d30.0002549!4d-90.0254014!16s%2Fg%2F11jvmmqppm?hl=en&entry=ttu&g_ep=EgoyMDI2MDcyNy4wIKXMDSoASAFQAw%3D%3D) |
 | **Years of Experience** | 26+ |
 | **Projects Completed** | 800+ |
 | **Color Theme** | Same as template |
@@ -52,7 +52,7 @@ The website must feature separate pages for the following 6 locations:
 ## 4. Design & Feature Adjustments
 
 ### Global Rules & References
-* **GMB Linking Rule:** Wherever the business name ("Erics Tidy Turf") is used on the website, it must be hyperlinked directly to their GMB profile: [https://share.google/Hkuf9AIgf7jVN6dC9](https://share.google/Hkuf9AIgf7jVN6dC9).
+* **GMB Linking Rule:** Wherever the business name ("Erics Tidy Turf") is used on the website, it must be hyperlinked directly to their GMB profile: [https://www.google.com/maps/place/Eric+Tidy+Turf/@30.0002549,-90.0254014,10z/data=!3m1!4b1!4m6!3m5!1s0x8620a72b11144a21:0xadc1ae7cf956345e!8m2!3d30.0002549!4d-90.0254014!16s%2Fg%2F11jvmmqppm?hl=en&entry=ttu&g_ep=EgoyMDI2MDcyNy4wIKXMDSoASAFQAw%3D%3D](https://www.google.com/maps/place/Eric+Tidy+Turf/@30.0002549,-90.0254014,10z/data=!3m1!4b1!4m6!3m5!1s0x8620a72b11144a21:0xadc1ae7cf956345e!8m2!3d30.0002549!4d-90.0254014!16s%2Fg%2F11jvmmqppm?hl=en&entry=ttu&g_ep=EgoyMDI2MDcyNy4wIKXMDSoASAFQAw%3D%3D).
 * **Color Theme:** Keep the color scheme identical to the template website.
 * **Other Features:** Unless specified below, all other features/sections from the template should remain the same.
 
