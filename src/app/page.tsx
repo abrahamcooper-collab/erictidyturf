@@ -171,7 +171,7 @@ export default function Home() {
 
           {/* CTA Buttons */}
           <div className="hero-actions">
-            <a href="#contact" className="btn btn-gold">
+            <a href="#quote" className="btn btn-gold">
               Get My Free Estimate
               <svg
                 width="16"
@@ -319,7 +319,7 @@ export default function Home() {
 
         <div className="services-grid">
           {SERVICES.map((service, index) => (
-            <a key={index} href={`/services/${service.slug}`} className="service-card">
+            <Link key={index} href={`/services/${service.slug}`} className="service-card">
               <div className="service-icon-wrapper">
                 {service.icon}
               </div>
@@ -340,7 +340,7 @@ export default function Home() {
                   <polyline points="9 18 15 12 9 6" />
                 </svg>
               </span>
-            </a>
+            </Link>
           ))}
         </div>
       </section>
