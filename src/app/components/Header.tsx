@@ -19,12 +19,13 @@ const SERVICES_LIST = [
 ];
 
 const AREAS_LIST = [
-  { title: "Gretna", slug: "gretna" },
-  { title: "Metairie", slug: "metairie" },
-  { title: "New Orleans", slug: "new-orleans" },
-  { title: "Kenner", slug: "kenner" },
-  { title: "Harvey", slug: "harvey" },
-  { title: "Marrero", slug: "marrero" }
+  { title: "Plaquemines Parish", slug: "plaquemines-parish" },
+  { title: "St. Bernard Parish", slug: "st-bernard-parish" },
+  { title: "Orleans Parish", slug: "orleans-parish" },
+  { title: "Jefferson Parish", slug: "jefferson-parish" },
+  { title: "St. Charles Parish", slug: "st-charles-parish" },
+  { title: "St. John Parish", slug: "st-john-parish" },
+  { title: "St. Tammany Parish", slug: "st-tammany-parish" }
 ];
 
 export default function Header() {
@@ -79,8 +80,8 @@ export default function Header() {
             className="logo-img"
             src="/logo.png"
             alt="Erics Tidy Turf Logo"
-            width={42}
-            height={42}
+            width={56}
+            height={56}
             priority
           />
           <div className="logo-text-wrapper">
@@ -136,6 +137,11 @@ export default function Header() {
           <li>
             <Link href="/#work" className="nav-link" onClick={() => setIsMenuOpen(false)}>
               Work
+            </Link>
+          </li>
+          <li>
+            <Link href="/gallery" className={`nav-link ${pathname === "/gallery" ? "active" : ""}`} onClick={() => setIsMenuOpen(false)}>
+              Gallery
             </Link>
           </li>
           <li>

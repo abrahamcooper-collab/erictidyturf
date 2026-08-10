@@ -155,7 +155,7 @@ export default function Home() {
           {/* Service Area Badge */}
           <div className="badge-serving">
             <span className="badge-dot" />
-            Serving Greater New Orleans Since 2000
+            Serving Greater New Orleans and Surrounding Areas Since 2000
           </div>
 
           {/* Main Title */}
@@ -437,41 +437,90 @@ export default function Home() {
           <div className="gallery-card">
             <img
               className="gallery-card-bg"
-              src="/gallery/firepit-courtyard.png"
-              alt="Metairie firepit courtyard"
+              src="/images/hardscaping/IMG_3164.jpg"
+              alt="Custom paver courtyard in Metairie"
             />
             <div className="gallery-card-overlay" />
             <div className="gallery-card-content">
               <span className="gallery-card-tag">Hardscape</span>
-              <h3 className="gallery-card-title">Metairie firepit courtyard</h3>
+              <h3 className="gallery-card-title">Metairie custom paver courtyard</h3>
             </div>
           </div>
 
           <div className="gallery-card">
             <img
               className="gallery-card-bg"
-              src="/gallery/palm-uplighting.png"
+              src="/images/landscape-lighting/75133391973__382782FD-03D6-4920-8576-509AA1D6AD85.jpeg"
               alt="Uptown palm uplighting"
             />
             <div className="gallery-card-overlay" />
             <div className="gallery-card-content">
               <span className="gallery-card-tag">Lighting</span>
-              <h3 className="gallery-card-title">Uptown palm uplighting</h3>
+              <h3 className="gallery-card-title">Uptown palm & architectural uplighting</h3>
             </div>
           </div>
 
           <div className="gallery-card">
             <img
               className="gallery-card-bg"
-              src="/gallery/fresh-sod-install.png"
-              alt="Old Metairie fresh install"
+              src="/images/sod-installation/IMG_7064.jpg"
+              alt="Old Metairie fresh sod installation"
             />
             <div className="gallery-card-overlay" />
             <div className="gallery-card-content">
               <span className="gallery-card-tag">Sod</span>
-              <h3 className="gallery-card-title">Old Metairie fresh install</h3>
+              <h3 className="gallery-card-title">Old Metairie fresh sod lawn install</h3>
             </div>
           </div>
+
+          <div className="gallery-card">
+            <img
+              className="gallery-card-bg"
+              src="/images/pavers/IMG_5764.jpg"
+              alt="Custom paver walkway installation"
+            />
+            <div className="gallery-card-overlay" />
+            <div className="gallery-card-content">
+              <span className="gallery-card-tag">Pavers</span>
+              <h3 className="gallery-card-title">Custom walkway & driveway pavers</h3>
+            </div>
+          </div>
+
+          <div className="gallery-card">
+            <img
+              className="gallery-card-bg"
+              src="/images/landscaping/IMG_5091.jpg"
+              alt="Residential landscaping & garden design"
+            />
+            <div className="gallery-card-overlay" />
+            <div className="gallery-card-content">
+              <span className="gallery-card-tag">Landscaping</span>
+              <h3 className="gallery-card-title">Residential landscaping & garden beds</h3>
+            </div>
+          </div>
+
+          <div className="gallery-card">
+            <img
+              className="gallery-card-bg"
+              src="/images/artificial-turf/IMG_4131.jpg"
+              alt="Premium artificial turf lawn installation"
+            />
+            <div className="gallery-card-overlay" />
+            <div className="gallery-card-content">
+              <span className="gallery-card-tag">Artificial Turf</span>
+              <h3 className="gallery-card-title">Low-maintenance artificial turf install</h3>
+            </div>
+          </div>
+        </div>
+
+        {/* View Full Gallery CTA */}
+        <div style={{ textAlign: "center", marginTop: "3rem" }}>
+          <Link href="/gallery" className="btn btn-primary" style={{ padding: "1rem 2.5rem", fontSize: "1rem", borderRadius: "99px" }}>
+            Explore Full Photo Gallery
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ marginLeft: "0.5rem" }}>
+              <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
+            </svg>
+          </Link>
         </div>
       </section>
 
@@ -503,19 +552,6 @@ export default function Home() {
 
           <div className="process-card">
             <span className="process-number">02</span>
-            <h3 className="process-card-title">Design</h3>
-            <p className="process-card-desc">
-              You get a clear plan with pricing — no vague estimates, no surprises.
-            </p>
-          </div>
-          <div className="process-arrow">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <polyline points="9 18 15 12 9 6" />
-            </svg>
-          </div>
-
-          <div className="process-card">
-            <span className="process-number">03</span>
             <h3 className="process-card-title">Build</h3>
             <p className="process-card-desc">
               Our in-house crew executes with obsessive attention to detail.
@@ -528,7 +564,7 @@ export default function Home() {
           </div>
 
           <div className="process-card">
-            <span className="process-number">04</span>
+            <span className="process-number">03</span>
             <h3 className="process-card-title">Enjoy</h3>
             <p className="process-card-desc">
               We walk you through, then keep up landscaping/lawn maintenance if you'd like.
@@ -571,7 +607,7 @@ export default function Home() {
             </div>
             <h3 className="why-card-title">26+ Years, Local</h3>
             <p className="why-card-desc">
-              Born and built in Greater New Orleans.
+              Born and built in Greater New Orleans and surrounding areas.
             </p>
           </div>
 
@@ -581,9 +617,9 @@ export default function Home() {
                 <path d="M12 3l1.912 5.813a2 2 0 001.275 1.275L21 12l-5.813 1.912a2 2 0 00-1.275 1.275L12 21l-1.912-5.813a2 2 0 00-1.275-1.275L3 12l5.813-1.912a2 2 0 001.275-1.275L12 3z" />
               </svg>
             </div>
-            <h3 className="why-card-title">Design-Led</h3>
+            <h3 className="why-card-title">Quality-Driven</h3>
             <p className="why-card-desc">
-              We think like architects, not lawn guys.
+              Premium materials and expert craftsmanship on every job.
             </p>
           </div>
 
@@ -692,7 +728,7 @@ export default function Home() {
               Request An Estimate
             </div>
             <h2 className="quote-heading">
-              Build your project in 60 seconds.
+              Get a free estimate today.
             </h2>
             <p className="quote-desc">
               Answer a few questions, then we&apos;ll call to confirm the details. No pressure, no spam.
@@ -949,26 +985,21 @@ export default function Home() {
               Service Area
             </div>
             <h2 className="area-heading">
-              Proudly serving Greater New Orleans.
+              Proudly serving Greater New Orleans and surrounding areas.
             </h2>
             <p className="area-desc">
-              Based in Gretna, working across the West Bank, Metairie, Uptown, and the North Shore.
+              Based in Gretna, working across the Greater New Orleans and surrounding areas.
             </p>
 
             <div className="area-badges-grid">
               {[
-                { name: "Gretna", link: "/service-areas/gretna" },
-                { name: "Metairie", link: "/service-areas/metairie" },
-                { name: "New Orleans", link: "/service-areas/new-orleans" },
-                { name: "Kenner", link: "/service-areas/kenner" },
-                { name: "Harvey", link: "/service-areas/harvey" },
-                { name: "Marrero", link: "/service-areas/marrero" },
-                { name: "Algiers", link: null },
-                { name: "Belle Chasse", link: null },
-                { name: "Chalmette", link: null },
-                { name: "River Ridge", link: null },
-                { name: "Terrytown", link: null },
-                { name: "Westwego", link: null }
+                { name: "Plaquemines Parish", link: "/service-areas/plaquemines-parish" },
+                { name: "St. Bernard Parish", link: "/service-areas/st-bernard-parish" },
+                { name: "Orleans Parish", link: "/service-areas/orleans-parish" },
+                { name: "Jefferson Parish", link: "/service-areas/jefferson-parish" },
+                { name: "St. Charles Parish", link: "/service-areas/st-charles-parish" },
+                { name: "St. John Parish", link: "/service-areas/st-john-parish" },
+                { name: "St. Tammany Parish", link: "/service-areas/st-tammany-parish" }
               ].map((area, idx) => {
                 const PinIcon = (
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="area-pin-icon">
@@ -1085,7 +1116,7 @@ export default function Home() {
               </div>
             </div>
             <p className="footer-desc">
-              Outdoor living, elevated. Design-forward landscaping across Greater New Orleans.
+              Outdoor living, elevated. Professional landscaping across Greater New Orleans and surrounding areas.
             </p>
             <div className="footer-social-links" style={{ display: "flex", gap: "0.75rem", marginTop: "1.5rem" }}>
               <a href="https://www.facebook.com/EricsTidyTurfLLC" target="_blank" rel="noopener noreferrer" className="footer-social-icon" aria-label="Facebook">
@@ -1207,7 +1238,7 @@ const SERVICES = [
   {
     title: "Landscaping",
     slug: "landscaping",
-    desc: "Design-forward planting, beds & garden architecture.",
+    desc: "Expert planting, beds & garden installations.",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 22v-5M17 17H7a5 5 0 0 1-3.46-8.6A6 6 0 0 1 12 3a6 6 0 0 1 8.46 5.4A5 5 0 0 1 17 17z" />
@@ -1460,7 +1491,7 @@ const FAQS = [
   },
   {
     q: "What areas do you serve?",
-    a: "Greater New Orleans including Gretna, Metairie, Uptown, Algiers, Kenner, Harvey, Marrero, and the North Shore."
+    a: "Greater New Orleans and surrounding areas including Plaquemines Parish, St. Bernard Parish, Orleans Parish, Jefferson Parish, St. Charles Parish, St. John Parish, and St. Tammany Parish."
   },
   {
     q: "Do you offer free estimates?",
@@ -1469,10 +1500,6 @@ const FAQS = [
   {
     q: "How long does a typical project take?",
     a: "Most residential builds run 3–14 days depending on scope. We give you a firm schedule before we start."
-  },
-  {
-    q: "Do you handle design as well as install?",
-    a: "Absolutely — we design in-house and build in-house. One team, one point of contact."
   },
   {
     q: "What kind of pavers do you install?",
@@ -1488,7 +1515,7 @@ const FAQS = [
   },
   {
     q: "Do you offer ongoing landscaping/lawn maintenance?",
-    a: "Yes — weekly, bi-weekly, or seasonal programs available."
+    a: "Yes — weekly or seasonal programs available."
   },
   {
     q: "How soon can you start?",
@@ -1501,10 +1528,6 @@ const FAQS = [
   {
     q: "What financing is available?",
     a: "We can point you to trusted financing partners for larger projects."
-  },
-  {
-    q: "Do you warranty your work?",
-    a: "Yes — installation is warrantied, and manufacturer warranties pass through on materials."
   },
   {
     q: "What's the deposit structure?",

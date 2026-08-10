@@ -33,17 +33,18 @@ const GENERAL_FAQS = [
 ];
 
 export const metadata = {
-  title: "Landscaping in Kenner, LA | Eric's Tidy Turf",
-  description: "Professional landscaping and outdoor installations in Kenner, LA. High-quality services across Greater New Orleans."
+  title: "Landscaping in St. Bernard Parish, LA | Eric's Tidy Turf",
+  description: "Professional landscaping and outdoor installations in St. Bernard Parish, LA. High-quality services across Greater New Orleans and surrounding areas."
 };
 
-export default function KennerPage() {
+export default function StBernardParishPage() {
   const otherAreas = [
-    { title: "Gretna", slug: "gretna" },
-    { title: "Metairie", slug: "metairie" },
-    { title: "New Orleans", slug: "new-orleans" },
-    { title: "Harvey", slug: "harvey" },
-    { title: "Marrero", slug: "marrero" }
+    { title: "Plaquemines Parish", slug: "plaquemines-parish" },
+    { title: "Orleans Parish", slug: "orleans-parish" },
+    { title: "Jefferson Parish", slug: "jefferson-parish" },
+    { title: "St. Charles Parish", slug: "st-charles-parish" },
+    { title: "St. John Parish", slug: "st-john-parish" },
+    { title: "St. Tammany Parish", slug: "st-tammany-parish" }
   ];
 
   return (
@@ -58,10 +59,10 @@ export default function KennerPage() {
             SERVICE COVERAGE
           </div>
           <h1 className="process-heading" style={{ color: "#ffffff", fontSize: "4.5rem", maxWidth: "800px", margin: "1rem 0", lineHeight: "1.1" }}>
-            Serving Kenner, LA
+            Serving St. Bernard Parish, LA
           </h1>
           <p style={{ fontSize: "1.25rem", color: "rgba(255, 255, 255, 0.8)", maxWidth: "700px", lineHeight: "1.6", marginBottom: "2.5rem" }}>
-            Professional landscaping and outdoor installations in Kenner, LA. Contact <a href="https://www.google.com/maps/place/Eric+Tidy+Turf/@30.0002549,-90.0254014,10z/data=!3m1!4b1!4m6!3m5!1s0x8620a72b11144a21:0xadc1ae7cf956345e!8m2!3d30.0002549!4d-90.0254014!16s%2Fg%2F11jvmmqppm?hl=en&entry=ttu&g_ep=EgoyMDI2MDcyNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "underline", color: "inherit", fontWeight: "bold" }}>Eric’s Tidy Turf Landscaping</a> for professional outdoor services.
+            Professional landscaping and outdoor installations in St. Bernard Parish, LA. Contact <a href="https://www.google.com/maps/place/Eric+Tidy+Turf/@30.0002549,-90.0254014,10z/data=!3m1!4b1!4m6!3m5!1s0x8620a72b11144a21:0xadc1ae7cf956345e!8m2!3d30.0002549!4d-90.0254014!16s%2Fg%2F11jvmmqppm?hl=en&entry=ttu&g_ep=EgoyMDI2MDcyNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "underline", color: "inherit", fontWeight: "bold" }}>Eric&apos;s Tidy Turf Landscaping</a> for professional outdoor services.
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
             <Link href="/#quote" className="btn btn-primary" style={{ padding: "1rem 2rem", fontSize: "1rem" }}>
@@ -83,8 +84,8 @@ export default function KennerPage() {
           {/* Left Column: Google Map Embed */}
           <div className="area-map-wrapper" style={{ boxShadow: "0 25px 50px rgba(25, 61, 27, 0.08)" }}>
             <iframe
-              title="Erics Tidy Turf Kenner Service Area Map"
-              src="https://www.google.com/maps?q=Kenner,+LA&z=12&output=embed"
+              title="Erics Tidy Turf St. Bernard Parish Service Area Map"
+              src="https://www.google.com/maps?q=Plaquemines+Parish,+LA&z=10&output=embed"
               className="area-map-iframe"
               allowFullScreen
               loading="lazy"
@@ -99,10 +100,10 @@ export default function KennerPage() {
               Coverage Details
             </div>
             <h2 className="area-heading" style={{ fontSize: "2.75rem", marginBottom: "1.25rem", lineHeight: "1.2" }}>
-              Professional layouts in Kenner.
+              Professional layouts in St. Bernard Parish.
             </h2>
             <p className="area-desc" style={{ marginBottom: "2rem", fontSize: "1rem" }}>
-              At <a href="https://www.google.com/maps/place/Eric+Tidy+Turf/@30.0002549,-90.0254014,10z/data=!3m1!4b1!4m6!3m5!1s0x8620a72b11144a21:0xadc1ae7cf956345e!8m2!3d30.0002549!4d-90.0254014!16s%2Fg%2F11jvmmqppm?hl=en&entry=ttu&g_ep=EgoyMDI2MDcyNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "underline", color: "inherit", fontWeight: "bold" }}>Eric’s Tidy Turf</a>, we offer our full range of design-forward yard work, custom paving, low-voltage lights, and storm water French drain solutions in Kenner, Louisiana.
+              At <a href="https://www.google.com/maps/place/Eric+Tidy+Turf/@30.0002549,-90.0254014,10z/data=!3m1!4b1!4m6!3m5!1s0x8620a72b11144a21:0xadc1ae7cf956345e!8m2!3d30.0002549!4d-90.0254014!16s%2Fg%2F11jvmmqppm?hl=en&entry=ttu&g_ep=EgoyMDI2MDcyNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "underline", color: "inherit", fontWeight: "bold" }}>Eric&apos;s Tidy Turf</a>, we offer our full range of professional yard work, custom paving, low-voltage lights, and storm water French drain solutions in St. Bernard Parish, Louisiana.
             </p>
 
             <div style={{ display: "flex", flexDirection: "column", gap: "1rem", borderTop: "1px solid rgba(25, 61, 27, 0.08)", paddingTop: "1.5rem" }}>
@@ -143,7 +144,7 @@ export default function KennerPage() {
               <span className="faq-tag-line" />
               What We Offer
             </div>
-            <h2 className="faq-heading" style={{ fontSize: "3rem" }}>Services Available in Kenner</h2>
+            <h2 className="faq-heading" style={{ fontSize: "3rem" }}>Services Available in St. Bernard Parish</h2>
           </div>
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "2.5rem" }}>
@@ -159,7 +160,7 @@ export default function KennerPage() {
                     {s.title}
                   </h4>
                   <p style={{ fontSize: "0.875rem", color: "#606c64", lineHeight: "1.5" }}>
-                    Professional design and installation by <span style={{ textDecoration: "underline", fontWeight: "bold" }}>Eric’s Tidy Turf</span> expert crew.
+                    Professional installation by <span style={{ textDecoration: "underline", fontWeight: "bold" }}>Eric&apos;s Tidy Turf</span> expert crew.
                   </p>
                 </div>
               </Link>
@@ -226,7 +227,7 @@ export default function KennerPage() {
               </div>
             </div>
             <p className="footer-desc">
-              Outdoor living, elevated. Design-forward landscaping across Greater New Orleans.
+              Outdoor living, elevated. Professional landscaping across Greater New Orleans and surrounding areas.
             </p>
             <div className="footer-social-links" style={{ display: "flex", gap: "0.75rem", marginTop: "1.5rem" }}>
               <a href="https://www.facebook.com/EricsTidyTurfLLC" target="_blank" rel="noopener noreferrer" className="footer-social-icon" aria-label="Facebook">
