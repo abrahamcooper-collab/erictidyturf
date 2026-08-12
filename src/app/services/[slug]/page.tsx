@@ -1,9 +1,8 @@
-import fs from "fs";
-import path from "path";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import FaqAccordion from "../../components/FaqAccordion";
 import ServiceGallery from "../../components/ServiceGallery";
+import { getServiceImages } from "../../../lib/cloudinary";
 
 const SERVICES_DATA: Record<string, {
   title: string;
@@ -187,16 +186,8 @@ export default async function ServiceSlugPage({ params }: { params: Promise<{ sl
     notFound();
   }
 
-  // Load images from public/images/<slug>/ if available
-  let images: string[] = [];
-  try {
-    const dirPath = path.join(process.cwd(), "public", "images", serviceSlug);
-    if (fs.existsSync(dirPath)) {
-      images = fs.readdirSync(dirPath).filter(f => !fs.statSync(path.join(dirPath, f)).isDirectory() && !f.toLowerCase().endsWith('.mov'));
-    }
-  } catch (e) {
-    console.error("Error loading service images:", e);
-  }
+  // Load service images from Cloudinary mapping
+  const images = getServiceImages(serviceSlug);
 
   return (
     <>

@@ -3,25 +3,119 @@ import { CLOUDINARY_MAP } from "./cloudinary-mapping";
 const CLOUD_NAME = "dcylaqbxa";
 const BASE_FOLDER = "erictidyturf";
 
+const CATEGORY_NAMES: Record<string, string> = {
+  "landscaping": "Landscaping",
+  "hardscaping": "Hardscaping",
+  "landscape-lighting": "Landscape Lighting",
+  "drainage": "Drainage",
+  "irrigation": "Irrigation",
+  "grading": "Grading",
+  "sod-installation": "Sod Installation",
+  "artificial-turf": "Artificial Turf",
+  "landscaping-lawn-maintenance": "Lawn Maintenance",
+  "pavers": "Pavers",
+};
+
+export interface GalleryItemData {
+  src: string;
+  categorySlug: string;
+  categoryTitle: string;
+  filename: string;
+}
+
+export interface CategoryOptionData {
+  slug: string;
+  title: string;
+  count: number;
+}
+
+/**
+ * Returns all gallery items and category stats extracted directly from CLOUDINARY_MAP.
+ * Does not depend on filesystem readdirSync at runtime or in production builds.
+ */
+export function getGalleryData(): { items: GalleryItemData[]; categories: CategoryOptionData[] } {
+  const items: GalleryItemData[] = [];
+  const categoryCounts: Record<string, number> = {};
+
+  for (const [path, url] of Object.entries(CLOUDINARY_MAP)) {
+    const parts = path.replace(/^\//, "").split("/");
+    
+    if (parts[0] === "images" && parts.length >= 3) {
+      const categorySlug = parts[1];
+      const filename = parts.slice(2).join("/");
+      
+      if (CATEGORY_NAMES[categorySlug] && !filename.toLowerCase().endsWith(".mov")) {
+        categoryCounts[categorySlug] = (categoryCounts[categorySlug] || 0) + 1;
+        items.push({
+          src: url,
+          categorySlug,
+          categoryTitle: CATEGORY_NAMES[categorySlug],
+          filename
+        });
+      }
+    } else if (parts[0] === "beforeandafter") {
+      const filename = parts.slice(1).join("/");
+      categoryCounts["beforeandafter"] = (categoryCounts["beforeandafter"] || 0) + 1;
+      items.unshift({
+        src: url,
+        categorySlug: "beforeandafter",
+        categoryTitle: "Before & After",
+        filename
+      });
+    }
+  }
+
+  const categories: CategoryOptionData[] = [
+    { slug: "all", title: "All Photos", count: items.length },
+    ...Object.entries(CATEGORY_NAMES).map(([slug, title]) => ({
+      slug,
+      title,
+      count: categoryCounts[slug] || 0
+    })).filter(c => c.count > 0)
+  ];
+
+  if (categoryCounts["beforeandafter"]) {
+    categories.push({
+      slug: "beforeandafter",
+      title: "Before & After",
+      count: categoryCounts["beforeandafter"]
+    });
+  }
+
+  return { items, categories };
+}
+
+/**
+ * Returns image filenames for a specific service slug extracted directly from CLOUDINARY_MAP.
+ */
+export function getServiceImages(serviceSlug: string): string[] {
+  const filenames: string[] = [];
+  const prefix = `/images/${serviceSlug}/`;
+  
+  for (const path of Object.keys(CLOUDINARY_MAP)) {
+    if (path.startsWith(prefix) && !path.toLowerCase().endsWith(".mov")) {
+      const fname = path.substring(prefix.length);
+      filenames.push(fname);
+    }
+  }
+  return filenames;
+}
+
 /**
  * Returns the exact, verified Cloudinary URL for a given local image path.
  */
 export function optimizedImageUrl(localPath: string, _options?: { width?: number; height?: number }): string {
-  // Normalize leading slash
   const normalized = localPath.startsWith("/") ? localPath : `/${localPath}`;
   
-  // 1. Check exact mapped Cloudinary URL first
   if (CLOUDINARY_MAP[normalized]) {
     return CLOUDINARY_MAP[normalized];
   }
   
-  // 2. Decode URL encoding if present and check again
   const decoded = decodeURIComponent(normalized);
   if (CLOUDINARY_MAP[decoded]) {
     return CLOUDINARY_MAP[decoded];
   }
 
-  // 3. Fallback: Construct direct Cloudinary URL
   const withoutSlash = normalized.replace(/^\//, "");
   const parts = withoutSlash.split("/");
   let publicPath: string;
