@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { optimizedImageUrl } from "../../lib/cloudinary";
 
 const SERVICES_LIST = [
   { title: "Landscaping", slug: "landscaping" },
@@ -78,7 +79,7 @@ export default function Header() {
         <div className="logo-container">
           <Image
             className="logo-img"
-            src="/logo.png"
+            src={optimizedImageUrl("/logo.png")}
             alt="Erics Tidy Turf Logo"
             width={56}
             height={56}
