@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Images served from Cloudinary CDN
+/public/images/
+/public/beforeandafter/
+/cloudinary-mapping.json
