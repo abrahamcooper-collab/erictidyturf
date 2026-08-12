@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { optimizedImageUrl, cloudinaryUrl, CLOUDINARY_IMAGES } from "../lib/cloudinary";
 
 export default function Home() {
   const bgRef = useRef<HTMLImageElement>(null);
@@ -70,6 +71,8 @@ export default function Home() {
     let ticking = false;
 
     const updateZoom = () => {
+      // Disable scroll transform on mobile devices to prevent scroll jitter and viewport shifts
+      if (window.innerWidth <= 768) return;
       if (bgRef.current) {
         const scrollY = window.scrollY;
         const scale = 1 + scrollY * 0.00035;
@@ -79,6 +82,7 @@ export default function Home() {
     };
 
     const handleScroll = () => {
+      if (window.innerWidth <= 768) return;
       if (!ticking) {
         window.requestAnimationFrame(updateZoom);
         ticking = true;
@@ -142,7 +146,7 @@ export default function Home() {
         <Image
           ref={bgRef}
           className="hero-bg"
-          src="/hero-image.jpg"
+          src={cloudinaryUrl(CLOUDINARY_IMAGES.hero, { width: 1920, quality: "auto:best" })}
           alt="Erics Tidy Turf Luxury Landscaping Background"
           fill
           priority
@@ -367,6 +371,7 @@ export default function Home() {
           <div
             ref={containerRef}
             className="slider-container"
+            style={{ touchAction: "pan-y" }}
             onMouseDown={handleMouseDown}
             onTouchStart={handleMouseDown}
           >
@@ -374,7 +379,7 @@ export default function Home() {
             <div className="slider-image-wrapper slider-image-before">
               <img
                 className="slider-img"
-                src="/beforeandafter/before.jpg"
+                src={cloudinaryUrl(CLOUDINARY_IMAGES.beforeAfterBefore, { width: 1200 })}
                 alt="Before landscaping work"
                 draggable={false}
               />
@@ -388,7 +393,7 @@ export default function Home() {
             >
               <img
                 className="slider-img"
-                src="/beforeandafter/after.jpg"
+                src={cloudinaryUrl(CLOUDINARY_IMAGES.beforeAfterAfter, { width: 1200 })}
                 alt="After landscaping work"
                 draggable={false}
               />
@@ -437,7 +442,7 @@ export default function Home() {
           <div className="gallery-card">
             <img
               className="gallery-card-bg"
-              src="/images/hardscaping/IMG_3164.jpg"
+              src={optimizedImageUrl("/images/hardscaping/IMG_3164.jpg", { width: 800 })}
               alt="Custom paver courtyard in Metairie"
             />
             <div className="gallery-card-overlay" />
@@ -450,7 +455,7 @@ export default function Home() {
           <div className="gallery-card">
             <img
               className="gallery-card-bg"
-              src="/images/landscape-lighting/75133391973__382782FD-03D6-4920-8576-509AA1D6AD85.jpeg"
+              src={optimizedImageUrl("/images/landscape-lighting/75133391973__382782FD-03D6-4920-8576-509AA1D6AD85.jpeg", { width: 800 })}
               alt="Uptown palm uplighting"
             />
             <div className="gallery-card-overlay" />
@@ -463,7 +468,7 @@ export default function Home() {
           <div className="gallery-card">
             <img
               className="gallery-card-bg"
-              src="/images/sod-installation/IMG_7064.jpg"
+              src={optimizedImageUrl("/images/sod-installation/IMG_7064.jpg", { width: 800 })}
               alt="Old Metairie fresh sod installation"
             />
             <div className="gallery-card-overlay" />
@@ -476,7 +481,7 @@ export default function Home() {
           <div className="gallery-card">
             <img
               className="gallery-card-bg"
-              src="/images/pavers/IMG_5764.jpg"
+              src={optimizedImageUrl("/images/pavers/IMG_5764.jpg", { width: 800 })}
               alt="Custom paver walkway installation"
             />
             <div className="gallery-card-overlay" />
@@ -489,7 +494,7 @@ export default function Home() {
           <div className="gallery-card">
             <img
               className="gallery-card-bg"
-              src="/images/landscaping/IMG_5091.jpg"
+              src={optimizedImageUrl("/images/landscaping/IMG_5091.jpg", { width: 800 })}
               alt="Residential landscaping & garden design"
             />
             <div className="gallery-card-overlay" />
@@ -502,7 +507,7 @@ export default function Home() {
           <div className="gallery-card">
             <img
               className="gallery-card-bg"
-              src="/images/artificial-turf/IMG_4131.jpg"
+              src={optimizedImageUrl("/images/artificial-turf/IMG_4131.jpg", { width: 800 })}
               alt="Premium artificial turf lawn installation"
             />
             <div className="gallery-card-overlay" />

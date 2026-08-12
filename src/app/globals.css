@@ -25,6 +25,7 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -35,6 +36,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.5;
   overflow-x: hidden;
+  position: relative;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
 }
 
 a {

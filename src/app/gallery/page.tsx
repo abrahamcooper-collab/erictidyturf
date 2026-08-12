@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import { Metadata } from "next";
 import GalleryClient, { GalleryItem, CategoryOption } from "../components/GalleryClient";
+import { optimizedImageUrl } from "../../lib/cloudinary";
 
 export const metadata: Metadata = {
   title: "Project Photo Gallery | Eric's Tidy Turf New Orleans",
@@ -31,7 +32,7 @@ export default function GalleryPage() {
     const entries = fs.readdirSync(imagesBaseDir);
     
     for (const categorySlug of entries) {
-      const categoryPath = osPathJoin(imagesBaseDir, categorySlug);
+      const categoryPath = path.join(imagesBaseDir, categorySlug);
       
       if (fs.statSync(categoryPath).isDirectory() && CATEGORY_NAMES[categorySlug]) {
         const categoryTitle = CATEGORY_NAMES[categorySlug];
@@ -41,8 +42,9 @@ export default function GalleryPage() {
         categoryCounts[categorySlug] = files.length;
 
         for (const filename of files) {
+          const localPath = `/images/${categorySlug}/${filename}`;
           items.push({
-            src: `/images/${categorySlug}/${encodeURIComponent(filename)}`,
+            src: optimizedImageUrl(localPath, { width: 800 }),
             categorySlug,
             categoryTitle,
             filename
@@ -52,29 +54,15 @@ export default function GalleryPage() {
     }
   }
 
-  // Also include highlighted project photos from public/gallery/ and public/beforeandafter/
-  const highlightGalleryDir = path.join(process.cwd(), "public", "gallery");
-  if (fs.existsSync(highlightGalleryDir)) {
-    const highlightFiles = fs.readdirSync(highlightGalleryDir).filter(f => !f.startsWith("."));
-    for (const filename of highlightFiles) {
-      items.unshift({
-        src: `/gallery/${filename}`,
-        categorySlug: "landscaping",
-        categoryTitle: "Featured Project",
-        filename
-      });
-      categoryCounts["landscaping"] = (categoryCounts["landscaping"] || 0) + 1;
-    }
-  }
-
   // Before & After images
   const beforeAfterDir = path.join(process.cwd(), "public", "beforeandafter");
   if (fs.existsSync(beforeAfterDir)) {
     const baFiles = fs.readdirSync(beforeAfterDir).filter(f => !f.startsWith("."));
     categoryCounts["beforeandafter"] = baFiles.length;
     for (const filename of baFiles) {
+      const localPath = `/beforeandafter/${filename}`;
       items.unshift({
-        src: `/beforeandafter/${filename}`,
+        src: optimizedImageUrl(localPath, { width: 800 }),
         categorySlug: "beforeandafter",
         categoryTitle: "Before & After",
         filename
@@ -101,8 +89,4 @@ export default function GalleryPage() {
   }
 
   return <GalleryClient items={items} categories={categories} />;
-}
-
-function osPathJoin(...parts: string[]) {
-  return path.join(...parts);
 }

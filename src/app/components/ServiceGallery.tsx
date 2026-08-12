@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { optimizedImageUrl } from "../../lib/cloudinary";
 
 interface ServiceGalleryProps {
   images: string[];
@@ -82,7 +83,7 @@ export default function ServiceGallery({ images, serviceTitle, serviceSlug }: Se
               className="gallery-card"
             >
               <img
-                src={`/images/${serviceSlug}/${encodeURIComponent(imgName)}`}
+                src={optimizedImageUrl(`/images/${serviceSlug}/${imgName}`, { width: 600 })}
                 alt={`${serviceTitle} project ${idx + 1}`}
                 style={{
                   width: "100%",
@@ -201,7 +202,7 @@ export default function ServiceGallery({ images, serviceTitle, serviceSlug }: Se
             }}
           >
             <img
-              src={`/images/${serviceSlug}/${encodeURIComponent(images[selectedIndex])}`}
+              src={optimizedImageUrl(`/images/${serviceSlug}/${images[selectedIndex]}`, { width: 1400 })}
               alt={`${serviceTitle} expanded view ${selectedIndex + 1}`}
               style={{
                 maxWidth: "100%",
