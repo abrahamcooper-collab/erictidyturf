@@ -717,27 +717,52 @@ a {
 }
 
 .service-card {
-  background-color: #ffffff;
-  border: 1px solid rgba(20, 54, 38, 0.07);
+  background-color: var(--color-forest);
+  border: 1px solid transparent;
   border-radius: 24px;
   padding: 3rem 2.5rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: pointer;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.015);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Background image layer — hidden by default */
+.service-card-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: -2;
+  transform: scale(1.08);
+}
+
+/* Dark overlay for text readability on top of image */
+.service-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.7) 100%);
+  opacity: 0;
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: -1;
 }
 
 .service-icon-wrapper {
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  background-color: #f0f3f1;
+  background-color: rgba(255, 255, 255, 0.15);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-forest);
+  color: #ffffff;
   margin-bottom: 2rem;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -745,7 +770,7 @@ a {
 .service-card-title {
   font-family: var(--font-serif);
   font-size: 1.6rem;
-  color: var(--color-forest);
+  color: #ffffff;
   margin-bottom: 1rem;
   font-weight: 500;
   transition: color 0.4s ease;
@@ -754,7 +779,7 @@ a {
 .service-card-desc {
   font-size: 0.95rem;
   line-height: 1.6;
-  color: #555f59;
+  color: rgba(255, 255, 255, 0.8);
   margin-bottom: 2rem;
   transition: color 0.4s ease;
   flex-grow: 1;
@@ -765,7 +790,7 @@ a {
   align-items: center;
   font-size: 0.9rem;
   font-weight: 700;
-  color: var(--color-forest);
+  color: var(--color-gold);
   gap: 0.35rem;
   transition: all 0.4s ease;
 }
@@ -774,29 +799,28 @@ a {
   transition: transform 0.3s ease;
 }
 
-/* Hover Zoom and Color Inversion */
+/* Hover: reveal background image, hide green */
 .service-card:hover {
-  background-color: var(--color-forest);
+  background-color: transparent;
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(20, 54, 38, 0.25);
-  border-color: transparent;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.service-card:hover .service-card-bg {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.service-card:hover .service-card-overlay {
+  opacity: 1;
 }
 
 .service-card:hover .service-icon-wrapper {
-  background-color: rgba(255, 255, 255, 0.15);
-  color: #ffffff;
-}
-
-.service-card:hover .service-card-title {
-  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .service-card:hover .service-card-desc {
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.service-card:hover .service-card-link {
-  color: var(--color-gold);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .service-card:hover .service-card-link svg {
