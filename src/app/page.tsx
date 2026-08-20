@@ -326,7 +326,7 @@ export default function Home() {
             <Link key={index} href={`/services/${service.slug}`} className="service-card">
               <div
                 className="service-card-bg"
-                style={{ backgroundImage: `url(${service.bgImage})` }}
+                style={{ backgroundImage: `url(${optimizedImageUrl(service.bgImage)})` }}
               />
               <div className="service-card-overlay" />
               <div className="service-icon-wrapper">
@@ -486,7 +486,7 @@ export default function Home() {
           <div className="gallery-card">
             <img
               className="gallery-card-bg"
-              src={optimizedImageUrl("/images/pavers/IMG_5764.jpg", { width: 800 })}
+              src={optimizedImageUrl("/images/pavers/top/924a95f5e0f13ee4bb6581dfe7bf233c3a0892f9-1.jfif", { width: 800 })}
               alt="Custom paver walkway installation"
             />
             <div className="gallery-card-overlay" />
@@ -1249,7 +1249,7 @@ const SERVICES = [
     title: "Landscaping",
     slug: "landscaping",
     desc: "Expert planting, beds & garden installations.",
-    bgImage: "https://res.cloudinary.com/dcylaqbxa/image/upload/v1786510092/erictidyturf/landscaping/IMG_5711.jpg",
+    bgImage: "/whatwedo/landscaping.jpeg",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 22v-5M17 17H7a5 5 0 0 1-3.46-8.6A6 6 0 0 1 12 3a6 6 0 0 1 8.46 5.4A5 5 0 0 1 17 17z" />
@@ -1304,7 +1304,7 @@ const SERVICES = [
     title: "Grading",
     slug: "grading",
     desc: "Precision site prep for a permanent foundation.",
-    bgImage: "https://res.cloudinary.com/dcylaqbxa/image/upload/v1786509562/erictidyturf/grading/IMG_5691.jpg",
+    bgImage: "/whatwedo/grading.jpeg",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <rect x="2" y="7" width="20" height="10" rx="2" ry="2" />
@@ -1328,7 +1328,7 @@ const SERVICES = [
     title: "Artificial Turf",
     slug: "artificial-turf",
     desc: "Year-round green, zero landscaping/lawn maintenance.",
-    bgImage: "https://res.cloudinary.com/dcylaqbxa/image/upload/v1786509505/erictidyturf/artificial-turf/IMG_4131.jpg",
+    bgImage: "/whatwedo/ArtificialTurf.jpeg",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <rect x="3" y="3" width="18" height="18" rx="2" />
@@ -1340,7 +1340,7 @@ const SERVICES = [
     title: "Landscaping/Lawn Maintenance",
     slug: "landscaping-lawn-maintenance",
     desc: "Seasonal programs to keep it magazine-ready.",
-    bgImage: "https://res.cloudinary.com/dcylaqbxa/image/upload/v1786510810/erictidyturf/landscaping-lawn-maintenance/IMG_5814.jpg",
+    bgImage: "/whatwedo/maintainance.jpeg",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
@@ -1351,7 +1351,7 @@ const SERVICES = [
     title: "Pavers",
     slug: "pavers",
     desc: "Driveways, pool decks, entry walks & more.",
-    bgImage: "https://res.cloudinary.com/dcylaqbxa/image/upload/v1786541021/erictidyturf/images/pavers/8afa8096-4b73-4016-8030-a220ec81f537.jpg",
+    bgImage: "/whatwedo/pavers.jpeg",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 3l1.912 5.813a2 2 0 001.275 1.275L21 12l-5.813 1.912a2 2 0 00-1.275 1.275L12 21l-1.912-5.813a2 2 0 00-1.275-1.275L3 12l5.813-1.912a2 2 0 001.275-1.275L12 3z" />

@@ -732,33 +732,34 @@ a {
   z-index: 1;
 }
 
-/* Background image layer — hidden by default */
+/* Background image layer — visible as card background */
 .service-card-bg {
   position: absolute;
   inset: 0;
   background-size: cover;
   background-position: center;
-  opacity: 0;
-  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  opacity: 1;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
   z-index: -2;
-  transform: scale(1.08);
+  transform: scale(1);
 }
 
 /* Dark overlay for text readability on top of image */
 .service-card-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.7) 100%);
-  opacity: 0;
-  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.75) 100%);
+  opacity: 1;
   z-index: -1;
+  transition: background 0.4s ease;
 }
 
 .service-icon-wrapper {
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(4px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -779,7 +780,7 @@ a {
 .service-card-desc {
   font-size: 0.95rem;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.88);
   margin-bottom: 2rem;
   transition: color 0.4s ease;
   flex-grow: 1;
@@ -799,24 +800,22 @@ a {
   transition: transform 0.3s ease;
 }
 
-/* Hover: reveal background image, hide green */
+/* Hover: Lift card and subtle image zoom */
 .service-card:hover {
-  background-color: transparent;
   transform: translateY(-8px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
 }
 
 .service-card:hover .service-card-bg {
-  opacity: 1;
-  transform: scale(1);
+  transform: scale(1.06);
 }
 
 .service-card:hover .service-card-overlay {
-  opacity: 1;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.85) 100%);
 }
 
 .service-card:hover .service-icon-wrapper {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.28);
 }
 
 .service-card:hover .service-card-desc {

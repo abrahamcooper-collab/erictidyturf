@@ -257,6 +257,33 @@ export default async function ServiceSlugPage({ params }: { params: Promise<{ sl
         </div>
       </section>
 
+      {/* Featured Top Pavers Section */}
+      {serviceSlug === "pavers" && (
+        <section style={{ backgroundColor: "#ffffff", padding: "4rem 2rem 2rem 2rem" }}>
+          <div style={{ maxWidth: "var(--max-width)", margin: "0 auto" }}>
+            <div className="area-tag" style={{ marginBottom: "0.75rem" }}>
+              <span className="area-tag-line" />
+              TOP PROJECTS
+            </div>
+            <h2 style={{ fontSize: "2.5rem", fontFamily: "var(--font-serif)", color: "var(--color-forest)", marginBottom: "1.75rem" }}>
+              Featured Paver Installations
+            </h2>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "1.25rem" }}>
+              {[1, 2, 3, 4, 5].map((num) => (
+                <div key={num} style={{ borderRadius: "16px", overflow: "hidden", height: "220px", boxShadow: "0 8px 24px rgba(0, 0, 0, 0.08)", position: "relative" }}>
+                  <img
+                    src={`/images/pavers/top/924a95f5e0f13ee4bb6581dfe7bf233c3a0892f9-${num}.jfif`}
+                    alt={`Top paver installation project ${num}`}
+                    style={{ width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.4s ease" }}
+                    className="featured-paver-img"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Interactive Project Image Gallery */}
       <ServiceGallery images={images} serviceTitle={service.title} serviceSlug={serviceSlug} />
 
