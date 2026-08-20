@@ -105,6 +105,9 @@ export function getServiceImages(serviceSlug: string): string[] {
  * Returns the exact, verified Cloudinary URL for a given local image path.
  */
 export function optimizedImageUrl(localPath: string, _options?: { width?: number; height?: number }): string {
+  if (localPath.startsWith("http://") || localPath.startsWith("https://")) {
+    return localPath;
+  }
   const normalized = localPath.startsWith("/") ? localPath : `/${localPath}`;
   
   if (CLOUDINARY_MAP[normalized]) {

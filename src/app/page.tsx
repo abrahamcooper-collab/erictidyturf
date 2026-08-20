@@ -1260,7 +1260,7 @@ const SERVICES = [
     title: "Hardscaping",
     slug: "hardscaping",
     desc: "Custom pavers, patios, walkways & retaining walls.",
-    bgImage: "https://res.cloudinary.com/dcylaqbxa/image/upload/v1786509690/erictidyturf/hardscaping/74656646398__9D46FB2C-AB7E-461C-BE8B-01B5E15AE798.jpg",
+    bgImage: "/images/hardscaping/74656646398__9D46FB2C-AB7E-461C-BE8B-01B5E15AE798.jpg",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
@@ -1271,7 +1271,7 @@ const SERVICES = [
     title: "Landscape Lighting",
     slug: "landscape-lighting",
     desc: "Low-voltage systems that make the yard glow.",
-    bgImage: "https://res.cloudinary.com/dcylaqbxa/image/upload/v1786509996/erictidyturf/landscape-lighting/75133363837__C07DA421-F38B-4375-AB5F-ED5B03FC25B7.jpg",
+    bgImage: "/images/landscape-lighting/75133363837__C07DA421-F38B-4375-AB5F-ED5B03FC25B7.jpg",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A5.5 5.5 0 0 0 12.5 2.5c-3 0-5.5 2.5-5.5 5.5 0 1.3.5 2.6 1.5 3.5.8.8 1.3 1.5 1.5 2.5M9 18h6M10 22h4" />
@@ -1282,7 +1282,7 @@ const SERVICES = [
     title: "Drainage",
     slug: "drainage",
     desc: "French drains & grading that solve standing water.",
-    bgImage: "https://res.cloudinary.com/dcylaqbxa/image/upload/v1786509518/erictidyturf/drainage/010ef7ca-647f-4699-986f-d408c118a28b.jpg",
+    bgImage: "/images/drainage/010ef7ca-647f-4699-986f-d408c118a28b.jpg",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 22a7 7 0 0 0 7-7c0-4.3-7-11-7-11S5 11 5 15a7 7 0 0 0 7 7z" />
@@ -1293,7 +1293,7 @@ const SERVICES = [
     title: "Irrigation",
     slug: "irrigation",
     desc: "Smart, water-efficient sprinkler systems.",
-    bgImage: "https://res.cloudinary.com/dcylaqbxa/image/upload/v1786509986/erictidyturf/irrigation/IMG_5795.jpg",
+    bgImage: "/images/irrigation/IMG_5795.jpg",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M2 6c.6.5 1.2 1 2.5 1s1.9-.5 2.5-1c.6-.5 1.2-1 2.5-1s1.9.5 2.5 1c.6.5 1.2 1 2.5 1s1.9-.5 2.5-1c.6-.5 1.2-1 2.5-1s1.9.5 2.5 1M2 12c.6.5 1.2 1 2.5 1s1.9-.5 2.5-1c.6-.5 1.2-1 2.5-1s1.9.5 2.5 1c.6.5 1.2 1 2.5 1s1.9-.5 2.5-1c.6-.5 1.2-1 2.5-1s1.9.5 2.5 1M2 18c.6.5 1.2 1 2.5 1s1.9-.5 2.5-1c.6-.5 1.2-1 2.5-1s1.9.5 2.5 1c.6.5 1.2 1 2.5 1s1.9-.5 2.5-1c.6-.5 1.2-1 2.5-1s1.9.5 2.5 1" />
@@ -1316,7 +1316,7 @@ const SERVICES = [
     title: "Sod Installation",
     slug: "sod-installation",
     desc: "Premium sod, lush from day one.",
-    bgImage: "https://res.cloudinary.com/dcylaqbxa/image/upload/v1786541429/erictidyturf/images/sod-installation/IMG_5708.jpg",
+    bgImage: "/images/sod-installation/IMG_5708.jpg",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.5 0 8.5C17 15 15 18 11 20z" />
