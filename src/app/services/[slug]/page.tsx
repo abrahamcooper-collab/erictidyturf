@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import FaqAccordion from "../../components/FaqAccordion";
 import ServiceGallery from "../../components/ServiceGallery";
-import { getServiceImages } from "../../../lib/cloudinary";
+import { getServiceImages, optimizedImageUrl } from "../../../lib/cloudinary";
 
 const SERVICES_DATA: Record<string, {
   title: string;
@@ -272,7 +272,7 @@ export default async function ServiceSlugPage({ params }: { params: Promise<{ sl
               {[1, 2, 3, 4, 5].map((num) => (
                 <div key={num} style={{ borderRadius: "16px", overflow: "hidden", height: "220px", boxShadow: "0 8px 24px rgba(0, 0, 0, 0.08)", position: "relative" }}>
                   <img
-                    src={`/images/pavers/top/924a95f5e0f13ee4bb6581dfe7bf233c3a0892f9-${num}.jfif`}
+                    src={optimizedImageUrl(`/images/pavers/top/924a95f5e0f13ee4bb6581dfe7bf233c3a0892f9-${num}.jfif`)}
                     alt={`Top paver installation project ${num}`}
                     style={{ width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.4s ease" }}
                     className="featured-paver-img"
