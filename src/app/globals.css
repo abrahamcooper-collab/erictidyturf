@@ -1424,11 +1424,11 @@ a {
   box-shadow: 0 20px 50px rgba(25, 61, 27, 0.04);
   border: 1px solid rgba(25, 61, 27, 0.05);
   position: relative;
-  min-height: 380px;
+  height: 480px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: all 0.3s ease;
+  overflow: hidden;
 }
 
 .review-stars {
@@ -1454,8 +1454,9 @@ a {
 .review-text-container {
   flex-grow: 1;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 3rem;
+  overflow-y: auto;
 }
 
 .review-text {
@@ -1542,7 +1543,7 @@ a {
   }
   .review-card {
     padding: 3rem 2rem;
-    min-height: 450px;
+    height: 520px;
   }
   .review-text {
     font-size: 1.5rem;
