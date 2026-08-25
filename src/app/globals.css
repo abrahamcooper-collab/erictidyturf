@@ -422,6 +422,7 @@ a {
 
 /* Responsive adjustments */
 @media (max-width: 991px) {
+
   /* Hamburger toggle styling */
   .menu-toggle {
     display: flex;
@@ -451,7 +452,7 @@ a {
     background-color: var(--color-forest);
     border-radius: 9999px;
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-                opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     transform-origin: center center;
   }
 
@@ -459,10 +460,12 @@ a {
   .menu-toggle.open .burger-bar:nth-child(1) {
     transform: translateY(7px) rotate(45deg);
   }
+
   .menu-toggle.open .burger-bar:nth-child(2) {
     opacity: 0;
     transform: scaleX(0);
   }
+
   .menu-toggle.open .burger-bar:nth-child(3) {
     transform: translateY(-7px) rotate(-45deg);
   }
@@ -636,6 +639,7 @@ a {
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem 1.5rem;
   }
+
   .stat-number {
     font-size: 3.25rem;
   }
@@ -830,6 +834,7 @@ a {
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .services-header {
     flex-direction: column;
     align-items: flex-start;
@@ -842,10 +847,12 @@ a {
   .services-main-heading {
     font-size: 2.75rem;
   }
+
   .services-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
+
   .service-card {
     padding: 2.5rem 2rem;
   }
@@ -1014,7 +1021,8 @@ a {
   justify-content: center;
   font-size: 1.2rem;
   font-weight: bold;
-  pointer-events: none; /* Let clicks pass to the line */
+  pointer-events: none;
+  /* Let clicks pass to the line */
   border: 1.5px solid var(--color-emerald);
 }
 
@@ -1053,12 +1061,10 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    to bottom,
-    rgba(18, 28, 23, 0) 40%,
-    rgba(18, 28, 23, 0.5) 70%,
-    rgba(18, 28, 23, 0.9) 100%
-  );
+  background: linear-gradient(to bottom,
+      rgba(18, 28, 23, 0) 40%,
+      rgba(18, 28, 23, 0.5) 70%,
+      rgba(18, 28, 23, 0.9) 100%);
   z-index: 2;
   transition: opacity 0.4s ease;
 }
@@ -1112,16 +1118,19 @@ a {
   .transformation-main-heading {
     font-size: 2.75rem;
   }
+
   .transformation-header {
     flex-direction: column;
     align-items: flex-start;
     gap: 2rem;
     margin-bottom: 3.5rem;
   }
+
   .gallery-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
+
   .gallery-card {
     height: 380px;
   }
@@ -1231,6 +1240,7 @@ a {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
   }
+
   .process-arrow {
     display: none;
   }
@@ -1362,10 +1372,12 @@ a {
   .why-main-heading {
     font-size: 2.75rem;
   }
+
   .why-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
+
   .why-card {
     padding: 2.5rem 2rem;
   }
@@ -1541,16 +1553,20 @@ a {
   .reviews-main-heading {
     font-size: 2.75rem;
   }
+
   .review-card {
     padding: 3rem 2rem;
     height: 520px;
   }
+
   .review-text {
     font-size: 1.5rem;
   }
+
   .review-text.long {
     font-size: 1.2rem;
   }
+
   .review-quote-icon {
     font-size: 5rem;
     top: 2rem;
@@ -1793,7 +1809,8 @@ a {
   gap: 0.75rem;
 }
 
-.form-input, .form-textarea {
+.form-input,
+.form-textarea {
   width: 100%;
   border-radius: 14px;
   border: 2px solid #eef2f0;
@@ -1806,7 +1823,8 @@ a {
   transition: border-color 0.2s ease;
 }
 
-.form-input:focus, .form-textarea:focus {
+.form-input:focus,
+.form-textarea:focus {
   border-color: var(--color-forest);
 }
 
@@ -1945,16 +1963,20 @@ a {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
+
   .quote-left {
     align-items: center;
     text-align: center;
   }
+
   .quote-heading {
     font-size: 3rem;
   }
+
   .quote-desc {
     margin-bottom: 2rem;
   }
+
   .quote-bullets {
     justify-content: center;
   }
@@ -1964,10 +1986,12 @@ a {
   .quote-heading {
     font-size: 2.5rem;
   }
+
   .options-grid {
     grid-template-columns: 1fr;
     gap: 0.5rem;
   }
+
   .quote-card {
     padding: 2rem 1.5rem;
   }
@@ -2105,16 +2129,20 @@ a {
     grid-template-columns: 1fr;
     gap: 4rem;
   }
+
   .area-left {
     align-items: center;
     text-align: center;
   }
+
   .area-heading {
     font-size: 3rem;
   }
+
   .area-badges-grid {
     justify-content: center;
   }
+
   .area-map-wrapper {
     max-width: 600px;
     margin: 0 auto;
@@ -2125,9 +2153,11 @@ a {
   .area-heading {
     font-size: 2.5rem;
   }
+
   .area-badges-grid {
     gap: 0.5rem;
   }
+
   .area-badge {
     padding: 0.5rem 1rem;
     font-size: 0.8rem;
@@ -2298,12 +2328,15 @@ a {
   .faq-heading {
     font-size: 2.75rem;
   }
+
   .faq-trigger {
     padding: 1.5rem 1.5rem;
   }
+
   .faq-question {
     font-size: 1.15rem;
   }
+
   .faq-answer {
     padding: 0 1.5rem 1.5rem 1.5rem;
     font-size: 0.9rem;
@@ -2514,6 +2547,7 @@ a {
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
+
   .footer-bottom {
     flex-direction: column;
     gap: 1rem;
@@ -2602,6 +2636,7 @@ a {
     padding: 0.5rem 0 0.5rem 1.5rem;
     display: none;
   }
+
   .dropdown-container:hover .dropdown-menu {
     display: block;
   }
@@ -2613,6 +2648,7 @@ a {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
