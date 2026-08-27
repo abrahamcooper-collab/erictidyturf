@@ -1233,7 +1233,7 @@ export default function Home() {
             <span>·</span>
             <span>Gretna, LA</span>
             <span>·</span>
-            <a href="https://businessupscalers.com" target="_blank" rel="noopener noreferrer" style={{ color: "inherit", textDecoration: "none" }}>
+            <a href="https://www.upscalers.us" target="_blank" rel="noopener noreferrer" style={{ color: "inherit", textDecoration: "none" }}>
               <strong>Designed by Upscalers</strong>
             </a>
           </div>
