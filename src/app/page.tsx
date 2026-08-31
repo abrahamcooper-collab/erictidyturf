@@ -447,7 +447,7 @@ export default function Home() {
           <div className="gallery-card">
             <img
               className="gallery-card-bg"
-              src={optimizedImageUrl("/images/hardscaping/IMG_3164.jpg", { width: 800 })}
+              src={optimizedImageUrl("/images/pavers/IMG_3164.jpg", { width: 800 })}
               alt="Custom paver courtyard in Metairie"
             />
             <div className="gallery-card-overlay" />
@@ -1260,7 +1260,7 @@ const SERVICES = [
     title: "Hardscaping",
     slug: "hardscaping",
     desc: "Custom pavers, patios, walkways & retaining walls.",
-    bgImage: "/images/hardscaping/74656646398__9D46FB2C-AB7E-461C-BE8B-01B5E15AE798.jpg",
+    bgImage: "/images/pavers/74656646398__9D46FB2C-AB7E-461C-BE8B-01B5E15AE798.jpg",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />

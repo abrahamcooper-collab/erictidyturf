@@ -85,8 +85,15 @@ export function getGalleryData(): { items: GalleryItemData[]; categories: Catego
   return { items, categories };
 }
 
+// Fallback mappings for services whose images were deduplicated into a related category
+const SERVICE_FALLBACKS: Record<string, string> = {
+  "hardscaping": "pavers",
+  "landscaping-lawn-maintenance": "landscaping",
+};
+
 /**
  * Returns image filenames for a specific service slug extracted directly from CLOUDINARY_MAP.
+ * If a service has no images of its own, falls back to a related category.
  */
 export function getServiceImages(serviceSlug: string): string[] {
   const filenames: string[] = [];
@@ -98,6 +105,12 @@ export function getServiceImages(serviceSlug: string): string[] {
       filenames.push(fname);
     }
   }
+
+  // If no images found, try the fallback category
+  if (filenames.length === 0 && SERVICE_FALLBACKS[serviceSlug]) {
+    return getServiceImages(SERVICE_FALLBACKS[serviceSlug]);
+  }
+
   return filenames;
 }
 
