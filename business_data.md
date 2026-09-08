@@ -64,3 +64,15 @@ The website must feature separate pages for the following 6 locations:
 ### Component Removals
 * **Calculator / Live Estimate & Prices:** Completely remove the calculator/live estimate tool and any sections displaying specific prices.
 * **Quote Form Adjustment (Step 2):** In the second step of the quote form, remove the option for **"High end homes"**.
+
+## 5. Owner Description
+
+**Owner & Operator — Eric’s TidyTurf Outdoor Living**
+
+Hello, my name is Eric Schweda, and I’m the proud owner and operator of Eric’s TidyTurf Outdoor Living. My journey began at just 12 years old, walking door to door asking neighbors if I could cut their yards. What started as a young kid with a willingness to work soon grew into a lifelong passion and a business built on hard work, integrity, quality, and pride.
+
+As the years went on, lawn care led me to discover an artistic and creative side of myself. I developed a passion for designing and creating beautiful landscapes and outdoor living spaces that transform properties and bring my customers’ visions to life. What began with simply cutting grass evolved into something much greater — creating outdoor spaces where families can live, relax, entertain, and make lasting memories.
+
+Now, more than 32 years later, I’m humbled and grateful for how far this journey has taken me. This business has given me opportunities I never could have imagined as that 12-year-old kid knocking on doors. It has allowed me to provide for my family, serve my community, build lasting relationships, and make a living doing something I genuinely love.
+
+I’m blessed beyond measure, humbled, grateful, and thankful for every customer, friend, family member, and person who has supported me throughout this journey. I never take for granted where I came from, and I’m excited about where we’re going.

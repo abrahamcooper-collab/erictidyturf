@@ -141,6 +141,11 @@ export default function Header() {
             </Link>
           </li>
           <li>
+            <Link href="/owner" className={`nav-link ${pathname === "/owner" ? "active" : ""}`} onClick={() => setIsMenuOpen(false)}>
+              Owner
+            </Link>
+          </li>
+          <li>
             <Link href="/gallery" className={`nav-link ${pathname === "/gallery" ? "active" : ""}`} onClick={() => setIsMenuOpen(false)}>
               Gallery
             </Link>

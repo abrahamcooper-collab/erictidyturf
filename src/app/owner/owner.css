@@ -1,0 +1,825 @@
+/* ============================
+   OWNER PAGE — Full Styling
+   Mirrors the reference design:
+   dark background, grid-pattern hero,
+   bold typography, accent corners on
+   portrait, 6-card standards grid,
+   work gallery, CTA, and reviews.
+   ============================
+   Colors adapted from the site's
+   forest-green + gold theme.
+   ============================ */
+
+/* ── Page Reset ── */
+.owner-page {
+  background-color: #0d1a0e;
+  color: #f0f0f0;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* ── Fade-Up Animation ── */
+.fade-up {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fade-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delays for children inside grids */
+.owner-standards-grid .fade-up:nth-child(1) { transition-delay: 0s; }
+.owner-standards-grid .fade-up:nth-child(2) { transition-delay: 0.08s; }
+.owner-standards-grid .fade-up:nth-child(3) { transition-delay: 0.16s; }
+.owner-standards-grid .fade-up:nth-child(4) { transition-delay: 0.24s; }
+.owner-standards-grid .fade-up:nth-child(5) { transition-delay: 0.32s; }
+.owner-standards-grid .fade-up:nth-child(6) { transition-delay: 0.40s; }
+
+.owner-work-grid .fade-up:nth-child(1) { transition-delay: 0s; }
+.owner-work-grid .fade-up:nth-child(2) { transition-delay: 0.08s; }
+.owner-work-grid .fade-up:nth-child(3) { transition-delay: 0.16s; }
+.owner-work-grid .fade-up:nth-child(4) { transition-delay: 0.24s; }
+.owner-work-grid .fade-up:nth-child(5) { transition-delay: 0.32s; }
+.owner-work-grid .fade-up:nth-child(6) { transition-delay: 0.40s; }
+
+.owner-reviews-grid .fade-up:nth-child(1) { transition-delay: 0s; }
+.owner-reviews-grid .fade-up:nth-child(2) { transition-delay: 0.1s; }
+.owner-reviews-grid .fade-up:nth-child(3) { transition-delay: 0.2s; }
+
+/* ============================
+   HERO SECTION — Grid BG
+   ============================ */
+.owner-hero {
+  position: relative;
+  padding: 8rem 2rem 5rem;
+  overflow: hidden;
+}
+
+/* Subtle grid lines overlay */
+.owner-hero-grid {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Radial gradient over the grid to add depth */
+.owner-hero-gradient {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    radial-gradient(ellipse 80% 60% at 30% 50%, rgba(25, 61, 27, 0.25) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 80% at 80% 40%, rgba(213, 178, 99, 0.06) 0%, transparent 60%),
+    linear-gradient(to bottom, rgba(13, 26, 14, 0) 0%, rgba(13, 26, 14, 0.6) 100%);
+}
+
+.owner-hero-inner {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  max-width: 1380px;
+  margin: 0 auto;
+}
+
+.owner-hero-label {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  color: var(--color-gold);
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.owner-hero-name {
+  font-family: var(--font-sans);
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  font-weight: 900;
+  line-height: 0.95;
+  color: #ffffff;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.owner-hero-name-accent {
+  color: var(--color-gold);
+}
+
+.owner-hero-role {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 1.5rem;
+  text-transform: uppercase;
+}
+
+.owner-hero-desc {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.65);
+  margin-top: 1.25rem;
+  max-width: 480px;
+}
+
+.owner-hero-desc a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.owner-hero-desc a:hover {
+  text-decoration: underline;
+}
+
+.owner-hero-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2.25rem;
+  flex-wrap: wrap;
+}
+
+/* ── Buttons ── */
+.owner-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 2rem;
+  background-color: var(--color-forest);
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.owner-btn-primary:hover {
+  background-color: var(--color-emerald);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(25, 61, 27, 0.4);
+}
+
+.owner-btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 2rem;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.owner-btn-outline:hover {
+  border-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.05);
+  transform: translateY(-2px);
+}
+
+/* ── Portrait ── */
+.owner-hero-portrait {
+  display: flex;
+  justify-content: center;
+}
+
+.owner-portrait-frame {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  border-radius: 6px;
+  overflow: visible;
+}
+
+.portrait-corner {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: var(--color-gold);
+  z-index: 2;
+}
+
+.portrait-corner-tl {
+  top: -9px;
+  left: -9px;
+}
+
+.portrait-corner-tr {
+  top: -9px;
+  right: -9px;
+}
+
+.portrait-corner-bl {
+  bottom: -9px;
+  left: -9px;
+}
+
+.portrait-corner-br {
+  bottom: -9px;
+  right: -9px;
+}
+
+.portrait-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+  object-fit: cover;
+  filter: grayscale(60%) contrast(1.08);
+  transition: filter 0.5s ease;
+}
+
+.owner-portrait-frame:hover .portrait-img {
+  filter: grayscale(0%) contrast(1);
+}
+
+/* ============================
+   STORY SECTION
+   ============================ */
+.owner-story {
+  padding: 6rem 2rem;
+  max-width: 1380px;
+  margin: 0 auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.owner-story-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.owner-story-label {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  color: var(--color-gold);
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.owner-story-heading {
+  font-family: var(--font-sans);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 900;
+  line-height: 1;
+  color: #ffffff;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.owner-story-heading-accent {
+  color: var(--color-gold);
+  font-style: italic;
+}
+
+.owner-story-subtitle {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: 2rem;
+  text-transform: uppercase;
+  line-height: 1.8;
+  max-width: 360px;
+  text-align: center;
+}
+
+.owner-story-right p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 1.5rem;
+}
+
+/* ── Quote ── */
+.owner-quote {
+  margin-top: 2rem;
+  padding-left: 1.5rem;
+  border-left: 3px solid var(--color-gold);
+}
+
+.owner-quote p {
+  font-size: 1rem !important;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.8) !important;
+  line-height: 1.75 !important;
+}
+
+.owner-quote cite {
+  display: block;
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--color-gold);
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+/* ============================
+   STANDARDS SECTION
+   ============================ */
+.owner-standards {
+  padding: 6rem 2rem;
+  max-width: 1380px;
+  margin: 0 auto;
+}
+
+.owner-standards-header {
+  margin-bottom: 3.5rem;
+}
+
+.owner-standards-label {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  color: var(--color-gold);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.owner-standards-heading {
+  font-family: var(--font-sans);
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  font-weight: 900;
+  color: #ffffff;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.owner-standards-heading-accent {
+  color: var(--color-gold);
+}
+
+/* ── Standards Grid ── */
+.owner-standards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.standard-card {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 2rem 1.75rem;
+  transition: border-color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+}
+
+.standard-card:hover {
+  border-color: rgba(213, 178, 99, 0.3);
+  background-color: rgba(255, 255, 255, 0.05);
+  transform: translateY(-4px);
+}
+
+.standard-num {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--color-gold);
+  margin-bottom: 1.25rem;
+}
+
+.standard-title {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.standard-desc {
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+}
+
+/* ============================
+   WORK GALLERY SECTION
+   ============================ */
+.owner-work {
+  padding: 6rem 2rem;
+  max-width: 1380px;
+  margin: 0 auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.owner-work-header {
+  margin-bottom: 3rem;
+}
+
+.owner-work-label {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  color: var(--color-gold);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.owner-work-heading {
+  font-family: var(--font-sans);
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  font-weight: 900;
+  color: #ffffff;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.owner-work-heading-accent {
+  color: var(--color-gold);
+}
+
+/* ── Work Grid (Masonry-ish) ── */
+.owner-work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  gap: 1rem;
+}
+
+.work-grid-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.work-grid-item-3 {
+  grid-row: span 2;
+}
+
+.work-grid-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.work-grid-item:hover .work-grid-img {
+  transform: scale(1.05);
+}
+
+.work-grid-overlay-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0.75rem 1.75rem;
+  background-color: var(--color-forest);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border-radius: 4px;
+  text-decoration: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.work-grid-item:hover .work-grid-overlay-btn {
+  opacity: 1;
+}
+
+.owner-work-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+/* ============================
+   CTA BANNER
+   ============================ */
+.owner-cta {
+  padding: 5rem 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.owner-cta-inner {
+  max-width: 1380px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.owner-cta-heading {
+  font-family: var(--font-sans);
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  font-weight: 900;
+  color: #ffffff;
+  margin: 0;
+  text-transform: uppercase;
+  line-height: 1.05;
+}
+
+.owner-cta-heading-accent {
+  color: var(--color-gold);
+}
+
+.owner-cta-sub {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: 0.75rem;
+  text-transform: uppercase;
+}
+
+.owner-cta-btn {
+  padding: 1rem 2.5rem;
+  font-size: 0.85rem;
+}
+
+/* ============================
+   REVIEWS SECTION
+   ============================ */
+.owner-reviews {
+  padding: 6rem 2rem;
+  max-width: 1380px;
+  margin: 0 auto;
+}
+
+.owner-reviews-header {
+  margin-bottom: 3.5rem;
+}
+
+.owner-reviews-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.owner-reviews-badge-text {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--color-gold);
+  text-transform: uppercase;
+}
+
+.owner-reviews-heading {
+  font-family: var(--font-sans);
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  font-weight: 900;
+  color: #ffffff;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.owner-reviews-heading-accent {
+  color: var(--color-gold);
+  font-style: italic;
+}
+
+.owner-reviews-sub {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 0.75rem;
+}
+
+/* ── Review Cards Grid ── */
+.owner-reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.owner-review-card {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 2rem;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.owner-review-card:hover {
+  border-color: rgba(213, 178, 99, 0.3);
+  transform: translateY(-4px);
+}
+
+.owner-review-stars {
+  color: var(--color-gold);
+  font-size: 1.1rem;
+  letter-spacing: 0.15em;
+  margin-bottom: 1.25rem;
+}
+
+.owner-review-text {
+  font-size: 0.9rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.owner-review-author {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.owner-review-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--color-forest);
+  color: var(--color-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+  flex-shrink: 0;
+}
+
+.owner-review-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.owner-review-name {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.owner-review-meta {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* ============================
+   RESPONSIVE — Tablet
+   ============================ */
+@media (max-width: 991px) {
+  .owner-hero-inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .owner-hero-desc {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .owner-hero-buttons {
+    justify-content: center;
+  }
+
+  .owner-hero-portrait {
+    order: -1;
+  }
+
+  .owner-portrait-frame {
+    max-width: 380px;
+  }
+
+  .owner-story-inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .owner-story-left {
+    text-align: center;
+  }
+
+  .owner-story-subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .owner-standards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .owner-work-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .work-grid-item-3 {
+    grid-row: span 1;
+  }
+
+  .owner-reviews-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .owner-cta-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* ============================
+   RESPONSIVE — Mobile
+   ============================ */
+@media (max-width: 640px) {
+  .owner-hero {
+    padding: 7rem 1.25rem 3rem;
+  }
+
+  .owner-hero-name {
+    font-size: 3rem;
+  }
+
+  .owner-portrait-frame {
+    max-width: 300px;
+  }
+
+  .owner-story {
+    padding: 4rem 1.25rem;
+  }
+
+  .owner-story-heading {
+    font-size: 2rem;
+  }
+
+  .owner-standards {
+    padding: 4rem 1.25rem;
+  }
+
+  .owner-standards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .owner-standards-heading {
+    font-size: 1.75rem;
+  }
+
+  .owner-work {
+    padding: 4rem 1.25rem;
+  }
+
+  .owner-work-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .owner-work-heading {
+    font-size: 1.75rem;
+  }
+
+  .owner-cta {
+    padding: 3rem 1.25rem;
+  }
+
+  .owner-cta-heading {
+    font-size: 1.75rem;
+  }
+
+  .owner-reviews {
+    padding: 4rem 1.25rem;
+  }
+
+  .owner-reviews-heading {
+    font-size: 1.75rem;
+  }
+
+  .owner-hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .owner-work-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
