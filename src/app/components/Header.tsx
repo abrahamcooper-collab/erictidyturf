@@ -81,8 +81,8 @@ export default function Header() {
             className="logo-img"
             src={optimizedImageUrl("/logo.png")}
             alt="Erics Tidy Turf Logo"
-            width={56}
-            height={56}
+            width={72}
+            height={72}
             priority
           />
           <div className="logo-text-wrapper">
