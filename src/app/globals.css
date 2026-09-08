@@ -178,11 +178,10 @@ a {
 }
 
 .logo-img {
-  width: 72px;
-  height: 72px;
-  border-radius: 8px;
+  height: 68px;
+  width: auto;
   object-fit: contain;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: block;
   transition: transform 0.3s ease;
 }
 
@@ -2379,11 +2378,10 @@ a {
 }
 
 .footer-logo {
-  border-radius: 8px;
-  width: 72px;
-  height: 72px;
+  height: 76px;
+  width: auto;
   object-fit: contain;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  display: block;
 }
 
 .footer-brand-text {

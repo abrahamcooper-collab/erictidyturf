@@ -77,13 +77,10 @@ export default function Header() {
       <nav className={`navbar ${isMenuOpen ? "mobile-open" : ""}`}>
         {/* Logo & Brand Name */}
         <div className="logo-container">
-          <Image
+          <img
             className="logo-img"
-            src={optimizedImageUrl("/logo.png")}
-            alt="Erics Tidy Turf Logo"
-            width={72}
-            height={72}
-            priority
+            src="/logo.png"
+            alt="Eric's Tidy Turf Logo"
           />
           <div className="logo-text-wrapper">
             <Link href="/" className="logo-title">
