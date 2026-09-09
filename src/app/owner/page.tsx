@@ -149,7 +149,7 @@ export default function OwnerPage() {
               <div className="portrait-corner portrait-corner-bl" />
               <div className="portrait-corner portrait-corner-br" />
               <img
-                src="/owner-portrait.png"
+                src="/owner.jpeg"
                 alt="Eric Schweda — Owner of Eric's TidyTurf"
                 className="portrait-img"
               />
