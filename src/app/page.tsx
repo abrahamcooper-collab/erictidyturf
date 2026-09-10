@@ -165,6 +165,11 @@ export default function Home() {
           {/* Main Title */}
           <h1 className="hero-title">
             Outdoor living, <span className="italic-gold">elevated.</span>
+            <img
+              src="/sheild.png"
+              alt="Eric's Tidy Turf Shield"
+              className="hero-title-shield"
+            />
           </h1>
 
           {/* Subtitle */}
